@@ -6,8 +6,10 @@ pipeline {
  steps {
  git branch: ‘feature-terraform’, url: ‘https://github.com/atul7107/Terraform.git’
  
- }
- }
+     }
+   }
+  }
+}
  stage(‘Set Terraform path’) {
  steps {
  script {
