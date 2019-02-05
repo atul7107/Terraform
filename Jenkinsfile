@@ -7,5 +7,6 @@ pipeline {
  git branch: ‘feature-terraform’, url: ‘github.com/atul7107/Terraform.git’
  
    }
+  }
  }
-}  
+} 
