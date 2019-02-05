@@ -8,17 +8,8 @@ pipeline {
  
    }
  }
- stage(‘set terraform path’) {
- steps {
- script {
- def tfHome = tool name: ‘Terraform’
- env.PATH = “${tfHome}:${env.PATH}”
- }
- sh ‘terraform — version’
- }
- }
  
- stage(‘Provision infrastructure’) {
+  stage(‘Provision infrastructure’) {
  
  steps {
  dir(‘dev’)
