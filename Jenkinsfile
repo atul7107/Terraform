@@ -1,23 +1,21 @@
 pipeline {
-agent any
-      
-stages {
-stage(‘Checkout’) {
-steps {
-git branch: ‘feature-terraform’, url: ‘github.com/atul7107/Terraform.git’
-             
- }
- }
- } 
-}
+    agent any
 
-stage('Provision infrastructure') {
-             
+    stages {
+        stage('Build') {
             steps {
-                sh 'terraform init'
-                sh 'terraform plan -out=plan'
-                sh 'terraform apply plan'
-              
-             
+                echo 'Building..'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
