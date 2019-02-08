@@ -3,6 +3,8 @@
 
 runcmd:
   # Install docker
-  - curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+   "sudo yum update -y",
+   "sudo yum install -y docker",
+   "sudo service docker start",
   # Run nginx
   - docker run -d -p 80:80 nginx
