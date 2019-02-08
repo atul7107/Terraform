@@ -1,14 +1,14 @@
 pipeline {
-    agent any
-      stages {
-      stage(‘Checkout’) {
-        steps {
-                git branch: ‘feature-terraform’, url: ‘github.com/atul7107/Terraform.git’
+agent any
+      
+stages {
+stage(‘Checkout’) {
+steps {
+git branch: ‘feature-terraform’, url: ‘github.com/atul7107/Terraform.git’
              
- 
-              }
-          }
-     } 
+ }
+ }
+ } 
 }
 
 stage('Provision infrastructure') {
