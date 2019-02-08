@@ -1,21 +1,11 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('checkout') {
-            steps {
-                checkout 'scm'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
+ agent any
+ 
+ stages {
+ stage(‘checkout’) {
+ steps {
+ checkout([$class: 'GitSCM', branches: [[name: 'feature-terraform']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GIT_HUB_ACCESS_TOKEN', url: 'https://github.com/atul7107/Terraform.git']]])
+ }
+ }
+ }
 }
