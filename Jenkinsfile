@@ -27,5 +27,6 @@ stage('Path') {
  sh 'terraform apply plan' 
  }
 }
- }
+}
+}
 }
