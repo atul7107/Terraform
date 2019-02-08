@@ -22,7 +22,7 @@ stage('Path') {
   script {
  sh 'terraform init'
  // sh 'terraform plan -out=plan'
- sh 'terraform destroy' 
+ sh 'terraform destroy -force' 
  }
 }
 }
