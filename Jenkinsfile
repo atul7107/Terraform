@@ -4,6 +4,7 @@ pipeline {
  stages {
  stage('Checkout') {
  steps {
+ cleanWs()
  git branch : 'feature-terraform', url: 'https://github.com/atul7107/Terraform.git'
  }
  }
