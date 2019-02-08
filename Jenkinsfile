@@ -19,7 +19,7 @@ stage('Path') {
  stage('Provision infrastructure') {
  
  steps {
- dir('dev')
+ dir('$WORKSPACE')
  {
  sh 'terraform init'
  sh 'terraform plan -out=plan'
