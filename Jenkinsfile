@@ -9,7 +9,7 @@ pipeline {
  }
  }
 }
- stage(‘Set Terraform’) {
+ stage(‘path') {
  steps {
  script {
  def tfHome = tool name: ‘Terraform’
