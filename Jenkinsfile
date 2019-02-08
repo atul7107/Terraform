@@ -21,8 +21,8 @@ stage('Path') {
  steps {
   script {
  sh 'terraform init'
- sh 'terraform plan -out=plan'
- sh 'terraform destroy plan' 
+ // sh 'terraform plan -out=plan'
+ sh 'terraform destroy' 
  }
 }
 }
