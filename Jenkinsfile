@@ -19,8 +19,6 @@ stage('Path') {
  stage('Provision infrastructure') {
  
  steps {
- dir('$WORKSPACE')
- {
  sh 'terraform init'
  sh 'terraform plan -out=plan'
  // sh ‘terraform destroy -auto-approve’
