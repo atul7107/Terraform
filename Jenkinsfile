@@ -18,3 +18,13 @@ checkout([$class: 'GitSCM', branches: [[name: 'feature-terraform']], doGenerateS
          sh 'terraform --version'
      }
 }
+stage('Provision infrastructure') {
+             
+            steps {
+                sh 'terraform init'
+                sh 'terraform plan -out=plan'
+                sh 'terraform apply plan'
+              
+             
+            }
+        }
