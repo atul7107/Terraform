@@ -19,7 +19,7 @@ stage('Path') {
  stage('Provision infrastructure') {
  
  steps {
- {
+  script {
  sh 'terraform init'
  sh 'terraform plan -out=plan'
  // sh ‘terraform destroy -auto-approve’
