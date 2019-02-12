@@ -24,7 +24,7 @@ stage('Set Terraform Path') {
  steps {
   script {
  sh 'terraform init'
- //sh 'terraform plan -out=plan'
+ sh 'terraform plan -out=plan'
  //sh 'terraform apply plan'  
  sh 'terraform destroy -force' 
  }
